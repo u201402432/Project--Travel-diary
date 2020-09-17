@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:name=".show_list"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".show_list" >
+
+      // 전체적인 레이아웃
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="right|top"
+        android:id="@+id/list_relative">
+
+        // 스크롤 뷰
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tool="http://schemas.android.com/tools"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+
+            android:id="@+id/scrollView"
+            android:background="@drawable/image_border"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/persetage">
+
+            // 서울 지역 테이블 레이아웃
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/list_resion_scroll"
+                android:baselineAligned="false"
+                >
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+
+                    android:id="@+id/list_total"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 전국 "
+                        android:textSize="20dp"
+                        android:id="@+id/total_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="total_click" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/total_persent"
+                        android:layout_column="8" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+
+                    android:id="@+id/list_seoul"
+
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 서울 "
+                        android:textSize="20dp"
+                        android:id="@+id/seoul_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="seoul_click" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/seoul_persent"
+                        android:layout_column="8" />
+
+                    // 서울 지역 스크롤 뷰
+
+                </TableRow>
+
+                // 경기도 테이블
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/list_경기도"
+                    android:layout_below="@+id/Recommend1"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="경기도 "
+                        android:textSize="20dp"
+                        android:id="@+id/경기도"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="geonggi_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/geonggi_persent"
+                        android:layout_column="8" />
+
+                    // 경기 지역 스크롤 뷰
+
+                </TableRow>
+
+                // 대전 시 테이블
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/list_daejeon"
+                    android:layout_below="@+id/daejeon"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 대전 "
+                        android:textSize="20sp"
+                        android:id="@+id/deajeon_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="daejeon_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/daejeon_persent"
+                        android:layout_column="8" />
+
+                    // 대전 지역 스크롤 뷰
+
+                </TableRow>
+
+                // 대구 시 테이블
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_daegu"
+                    android:layout_below="@+id/daegu"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 대구 "
+                        android:textSize="20dp"
+                        android:id="@+id/daegu_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="daegu_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/daegu_persent"
+                        android:layout_column="8" />
+
+                </TableRow>
+
+                // 울산 시 테이블
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_ulsan_click"
+                    android:layout_below="@+id/ulsan"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 울산 "
+                        android:textSize="20dp"
+                        android:id="@+id/ulsan_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="ulsan_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/ulsan_persent"
+                        android:layout_column="8" />
+
+                </TableRow>
+
+
+                // 부산 시 테이블
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_busan"
+                    android:layout_below="@+id/busan"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 부산 "
+                        android:textSize="20dp"
+                        android:id="@+id/busan_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="busan_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/busan_persent"
+                        android:layout_column="8" />
+
+                </TableRow>
+                // 광주
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_goang"
+                    android:layout_below="@+id/goang"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 광주 "
+                        android:textSize="20dp"
+                        android:id="@+id/goang_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="goang_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/goang_persent"
+                        android:layout_column="8" />
+
+
+
+                </TableRow>
+
+                // 강원도 지역 스크롤 뷰
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_gangwon"
+                    android:layout_below="@+id/gangwon"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 강원도 "
+                        android:textSize="20dp"
+                        android:id="@+id/gangwon_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="gangwon_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/gangwon_persent"
+                        android:layout_column="8" />
+
+                    // 충청도 지역 스크롤 뷰
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_chung"
+                    android:layout_below="@+id/chung"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 충청도 "
+                        android:textSize="20dp"
+                        android:id="@+id/chung_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="chung_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/chung_persent"
+                        android:layout_column="8" />
+                    
+                </TableRow>
+                
+                //  전라 지역 스크롤 뷰
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_jeonla"
+                    android:layout_below="@+id/jeonla"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 전라도 "
+                        android:textSize="20dp"
+                        android:id="@+id/jeonla_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="jeonla_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/jeonla_persent"
+                        android:layout_column="8" />
+
+                </TableRow>
+                
+                // 경상 지역 스크롤 뷰
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_geongsang"
+                    android:layout_below="@+id/geongsang"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" 경상도 "
+                        android:textSize="20dp"
+                        android:id="@+id/geongsang_click"
+                        android:autoText="false"
+                        android:layout_below="@+id/Recommend1"
+                        android:layout_alignEnd="@+id/Recommend1"
+                        android:clickable="true"
+                        android:onClick="geongsang_click"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 %"
+                        android:textSize="20dp"
+                        android:id="@+id/geongsang_persent"
+                        android:layout_column="8" />
+
+                </TableRow>
+                
+                // 제주도 지역 스크롤 뷰
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/list_jejoo"
+                    android:layout_alignParentStart="true"
+                    >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" 제주도 "
+                    android:textSize="20dp"
+                    android:id="@+id/jejoo_click"
+                    android:autoText="false"
+                    android:layout_below="@+id/Recommend1"
+                    android:layout_alignEnd="@+id/Recommend1"
+                    android:clickable="true"
+                    android:onClick="jejoo_click"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0 %"
+                    android:textSize="20dp"
+                    android:id="@+id/jejoo_persent"
+                    android:layout_column="8" />
+            </TableRow>
+
+        </TableLayout>
+
+
+        </ScrollView>
+
+           // 지역 텍스트
+
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="  지역"
+            android:textSize="30dp"
+            android:id="@+id/Recommend1"
+            android:autoText="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        // 시.구 텍스트
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="                  시/구"
+            android:textSize="30dp"
+            android:id="@+id/list_state"
+            android:autoText="false"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="79dp" />
+
+          // 퍼센트 텍스트
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="%  "
+            android:textSize="30dp"
+            android:id="@+id/persetage"
+            android:autoText="false"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/Recommend1"
+            android:layout_marginStart="42dp" />
+
+         <ListView
+             android:background="@drawable/image_border"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/sity_listView"
+             android:layout_alignTop="@+id/scrollView"
+             android:layout_alignParentEnd="true"
+             android:layout_toEndOf="@+id/scrollView"/>
+
+
+     </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".write_list_Activity">
+
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/항목추가"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="제목  : "
+            android:id="@+id/titleView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="제목을 입력하세요"
+            android:textSize="15dp"
+            android:id="@+id/title"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="일시  : "
+            android:id="@+id/dateView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="일시를 입력하세요"
+            android:textSize="15dp"
+            android:id="@+id/date"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout3"
+        android:useDefaultMargins="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="지역  : "
+            android:id="@+id/regionView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="지역을 입력하세요"
+            android:id="@+id/region"
+            android:textSize="15dp"
+            android:layout_row="0"
+            android:layout_column="1" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Add1"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="항목"
+            android:id="@+id/add_title"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="내용을 입력하세요"
+            android:id="@+id/add_content"
+            android:textSize="15dp"
+            android:layout_row="0"
+            android:layout_column="2" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Add1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Add2"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="항목"
+            android:id="@+id/add_title2"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="내용을 입력하세요"
+            android:id="@+id/add_content2"
+            android:textSize="15dp"
+            android:layout_row="0"
+            android:layout_column="2" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Add2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Add3"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="항목"
+            android:id="@+id/add_title3"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="내용을 입력하세요"
+            android:id="@+id/add_content3"
+            android:textSize="15dp"
+            android:layout_row="0"
+            android:layout_column="2" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Add3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Add4"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="항목"
+            android:id="@+id/add_title4"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="내용을 입력하세요"
+            android:id="@+id/add_content4"
+            android:textSize="15dp"
+            android:layout_row="0"
+            android:layout_column="2" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Add4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Add5"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:hint="항목"
+            android:id="@+id/add_title5"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="내용을 입력하세요"
+            android:id="@+id/add_content5"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:textSize="15dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Add5"
+        android:layout_above= "@+id/insertPhotoBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/contentLO">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="내용  :  "
+            android:id="@+id/contentView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="15dp" />
+
+        <ScrollView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:id="@+id/contentSV"
+            android:layout_row="0"
+            android:layout_column="1" >
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="내용을 입력하세요\n\n\n\n\n\n\n\n"
+                android:gravity="top"
+                android:textSize="15dp"
+                android:id="@+id/content"
+                android:phoneNumber="false"
+                android:background="#FFFFFF" />
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_row="1"
+            android:layout_column="1">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="  #"
+                android:textSize="15dp"
+                android:id="@+id/Tag"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:background="#FAFAD2" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="  #"
+                android:textSize="15dp"
+                android:id="@+id/Tag2"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:background="#FAFAD2" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="  #"
+                android:textSize="15dp"
+                android:id="@+id/Tag3"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:background="#FAFAD2" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="W"
+        android:id="@+id/WishBtn"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:textSize="40dp"
+        android:background="#00ff0000"
+        android:enabled="true"
+        android:textColor="#ffff0000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="wish"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:text="수정"
+        android:id="@+id/insertSaveBtn"
+        android:background="@drawable/com_rounded_corner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="temp_write" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:text="ShowPhoto"
+        android:id="@+id/insertPhotoBtn"
+        android:background="@drawable/com_rounded_corner"
+        android:layout_alignBottom="@+id/insertVideoBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:onClick="photoShow"
+        android:layout_toLeftOf="@+id/insertVideoBtn" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:text="videoplay"
+        android:id="@+id/insertVideoBtn"
+        android:background="@drawable/com_rounded_corner"
+        android:textSize="15dp"
+        android:onClick="VideoPlay"
+        android:layout_above="@+id/insertSaveBtn"
+        android:layout_alignRight="@+id/insertSaveBtn" />
+
+    //레이아웃에 추가
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/com_rounded_corner"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+</RelativeLayout>

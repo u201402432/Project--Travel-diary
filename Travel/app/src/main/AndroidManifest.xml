@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="travel.mp.com.travel" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        // 리스트로 보기 매니패스트
+        <activity android:name=".show_list_Activity"></activity>
+
+        // 리스트로 쓰기 매니패스트
+        <activity android:name=".write_list_Activity"></activity>
+
+        // 추천여행지 매니패스트
+        <activity android:name=".Recommend"></activity>
+
+        // wish 매니패스트
+        <activity android:name=".wish_list"></activity>
+
+        // view_list 매니패스트
+        <activity android:name=".view_list"></activity>
+
+        // view_select_activity 매니패스트
+        <activity android:name=".View_Select_Activity"></activity>
+
+        // intro 매니패스트
+        <activity android:name=".IntroSplash" android:theme="@style/noTitle" ></activity>
+
+        // setting 매니패스트
+        <activity android:name=".setting"></activity>
+
+
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+
+
+    
+</manifest>
